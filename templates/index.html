@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lyrics Predictor</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<div class="container">
+		<h1>Lyrics Predictor</h1>
+		<form id="lyrics-form" method="POST" action="{{ url_for('generate_lyrics') }}">
+			<label for="seed_text">Enter seed text:</label>
+			<input type="text" id="seed_text" name="seed_text" required>
+			<label for="length">Enter length of lyrics to generate:</label>
+			<input type="number" id="length" name="length" min="1" max="100" required>
+			<button type="submit">Generate Lyrics</button>
+		</form>
+		{% if generated_lyrics %}
+		<div id="lyrics-container">
+			<p>{{ generated_lyrics }}</p>
+		</div>
+		{% endif %}
+	</div>
+	<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
