@@ -6,4 +6,5 @@ This project involves training a deep learning algorithm to generate lyrics of t
 This is fun!
 
 Tools: TensorFlow, AWS, Google Colab, Python, Flask
+
 Skills: Data Engineering, Cloud, Data wrangling, Deep Learning, LSTM, MLOps
